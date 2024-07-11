@@ -1,6 +1,8 @@
 {
-  "parser": "@babel/eslint-parser",
-  "extends": ["airbnb"],
+  "parser": "babel-eslint",
+  "extends": [
+    "airbnb"
+  ],
   "globals": {
     "document": true,
     "window": true,
@@ -13,14 +15,15 @@
   "parserOptions": {
     "sourceType": "module",
     "ecmaVersion": 2017,
-    "requireConfigFile": false,
     "ecmaFeatures": {
       "jsx": true,
       "experimentalObjectRestSpread": true,
       "modules": true
     }
   },
-  "plugins": ["react-hooks"],
+  "plugins": [
+    "react-hooks"
+  ],
   "rules": {
     "arrow-body-style": "off",
     "class-methods-use-this": "off",
@@ -31,7 +34,10 @@
         "allowSingleLine": true
       }
     ],
-    "comma-dangle": ["error", "never"],
+    "comma-dangle": [
+      "error",
+      "never"
+    ],
     "consistent-return": "off",
     "curly": "error",
     "eol-last": "off",
