@@ -1,15 +1,16 @@
-import React from "react";
-import { MovieList } from "./pages/MovieList";
-import { BrowserRouter, Route, Switch } from "react-router-dom";
-import MovieDetails from "pages/MovieDetails";
+import MovieDetails from 'pages/MovieDetails';
+import MovieList from 'pages/MovieList';
+import { BrowserRouter, Route, Routes } from 'react-router-dom';
 
-export const App = () => {
+const App = () => {
   return (
     <BrowserRouter>
-      <Switch>
-        <Route path="/" exact component={MovieList} />
-        <Route path="/:movieID" exact component={MovieDetails} />
-      </Switch>
+      <Routes>
+        <Route path='/' element={<MovieList />} exact />
+        <Route path='/:movieID' element={<MovieDetails />} exact />
+      </Routes>
     </BrowserRouter>
   );
 };
+
+export default App;
